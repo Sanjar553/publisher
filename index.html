@@ -15,9 +15,9 @@
 
 <div class="card">
     <h2>Publisher</h2>
-    <input type="text" id="msgBody" placeholder="Xabar matnini kiriting...">
+    <input type="text" id="msgBody" placeholder="Xabar matnini kiriting..." />
     <br>
-    <button onclick="publishMessage()">Xabarni Nashr Etish</button>
+    <button onclick="publishMessage()">Xabarni EstoniC orqali yuborish</button>
 </div>
 
 <script>
@@ -30,17 +30,16 @@
         
         if (Notification.permission === 'granted') {
             // Xabarni yuborish (Broker vazifasini bajaruvchi tizimga)
-            new Notification("Yangi Eslatma", {
-                body: text,
-                icon: 'https://cdn-icons-png.flaticon.com/512/3064/3064197.png'
+            new Notification(text, {
+        
+                icon: 'https://cdn-icons-png.flaticon.com/128/8841/8841500.png'
             });
             console.log("Xabar nashr etildi: " + text);
         } else {
-            alert("Iltimos, bildirishnomalarga ruxsat bering!");
-            Notification.requestPermission();
+            alert("Iltimos, bildirishnomalarga ruxsat bering! bo'lmasa tizim xabar bermaydi,rad etildi: " + text);
+            alert (Notification.requestPermission());
         }
     }
 </script>
-
 </body>
 </html>
