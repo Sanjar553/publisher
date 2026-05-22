@@ -2,10 +2,10 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>EstoniC - Tizimga Xabar Berish Testi</title>
+    <title>Publisher - Xabar Yuboruvchi</title>
     <style>
         body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f9; }
-        .card { background: rgb(0, 0, 0); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
         input { padding: 10px; width: 80%; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
         button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
     </style>
@@ -16,7 +16,7 @@
     <h2>Publisher</h2>
     <input type="text" id="msgBody" placeholder="Xabar matnini kiriting...">
     <br>
-    <button onclick="publishMessage()">Xabar berish test uchun</button>
+    <button onclick="publishMessage()">Xabarni Nashr Etish</button>
 </div>
 
 <script>
@@ -29,9 +29,9 @@
         
         if (Notification.permission === 'granted') {
             // Xabarni yuborish (Broker vazifasini bajaruvchi tizimga)
-            new Notification("text", {
-                body: xabar,
-                icon: 'https://cdn-icons-png.flaticon.com/128/8841/8841500.png'
+            new Notification("Yangi Eslatma", {
+                body: text,
+                icon: 'https://cdn-icons-png.flaticon.com/512/3064/3064197.png'
             });
             console.log("Xabar nashr etildi: " + text);
         } else {
