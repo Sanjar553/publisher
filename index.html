@@ -2,7 +2,7 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Publisher - Xabar Yuboruvchi</title>
+    <title>EstoniC - Tizimga Xabar Berish Testi</title>
     <style>
         body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f9; }
         .card { background: rgb(0, 0, 0); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
@@ -16,7 +16,7 @@
     <h2>Publisher</h2>
     <input type="text" id="msgBody" placeholder="Xabar matnini kiriting...">
     <br>
-    <button onclick="publishMessage()">Xabar berish</button>
+    <button onclick="publishMessage()">Xabar berish test uchun</button>
 </div>
 
 <script>
@@ -30,8 +30,8 @@
         if (Notification.permission === 'granted') {
             // Xabarni yuborish (Broker vazifasini bajaruvchi tizimga)
             new Notification("text", {
-                body: xabar_keldi:,
-                icon: 'https://cdn-icons-mp4.flaticon.com/512/19004/19004074.mp4'
+                body: xabar,
+                icon: 'https://cdn-icons-png.flaticon.com/128/8841/8841500.png'
             });
             console.log("Xabar nashr etildi: " + text);
         } else {
