@@ -16,7 +16,7 @@
     <h2>Publisher</h2>
     <input type="text" id="msgBody" placeholder="Xabar matnini kiriting...">
     <br>
-    <button onclick="publishMessage()">Xabarni Nashr Etish</button>
+    <button onclick="publishMessage()">Xabar berish</button>
 </div>
 
 <script>
@@ -30,8 +30,8 @@
         if (Notification.permission === 'granted') {
             // Xabarni yuborish (Broker vazifasini bajaruvchi tizimga)
             new Notification("text", {
-                body: text,
-                icon: 'https://cdn-icons-png.flaticon.com/512/3064/3064197.png'
+                body: xabar_keldi:,
+                icon: './icon.jpg'
             });
             console.log("Xabar nashr etildi: " + text);
         } else {
